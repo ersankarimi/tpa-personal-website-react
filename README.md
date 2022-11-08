@@ -1,4 +1,4 @@
-# Todo List App with React.js & Redux
+# Personal Website with React.js
 
 Ini adalah Technical Project Assignment 4 dari Stage Front-End Web Dev di
 Skilvul. Untuk detail tugas lebih lanjut bisa dilihat pada link berikut

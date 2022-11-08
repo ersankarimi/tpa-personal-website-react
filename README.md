@@ -26,8 +26,6 @@ Local:
 
 ## Tech Stack
 
-### Commerce
-
 - HTML
 - CSS
   - Tailwind CSS

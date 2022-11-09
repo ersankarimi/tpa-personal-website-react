@@ -35,6 +35,9 @@ Local:
   - React Router
 - Misc
   - Framer Motion
+  - Vitest
+  - Testing Library
+    - @testing-library/jest-dom
   - Classnames
   - Prettier
   - ESLint

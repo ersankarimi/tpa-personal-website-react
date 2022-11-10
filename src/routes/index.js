@@ -1,4 +1,7 @@
+import About from "./about";
+import Blog from "./blog";
 import Homepage from "./homepage";
+import Projects from "./projects";
 import Root from "./root";
 
-export { Homepage, Root };
+export { About, Blog, Homepage, Projects, Root };

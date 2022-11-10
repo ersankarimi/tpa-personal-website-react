@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
 
-export default function Homepage() {
+export default function Blog() {
   return (
     <>
       <Helmet>
-        <title>Home | Ersan Karimi</title>
+        <title>Blog | Ersan Karimi</title>
       </Helmet>
-      <h1>Homepage</h1>
+      <h1>Blog</h1>
     </>
   );
 }

@@ -27,7 +27,7 @@ export default function Header() {
             setNavbarIsOpen(false);
           }}
         >
-          <img src={navbarLogo} alt="asdsad" />
+          <img src={navbarLogo} alt="Logo" />
           <h1 className="text-lg">Ersan Karimi</h1>
         </Link>
 

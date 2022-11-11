@@ -4,7 +4,7 @@ import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import { LayoutGroup, motion } from "framer-motion";
 
-import NavbarLogo from "../Icons/navbar-logo";
+import { navbarLogo } from "../../assets";
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -27,7 +27,7 @@ export default function Header() {
             setNavbarIsOpen(false);
           }}
         >
-          <NavbarLogo />
+          <img src={navbarLogo} alt="asdsad" />
           <h1 className="text-lg">Ersan Karimi</h1>
         </Link>
 

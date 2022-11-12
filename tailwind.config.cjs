@@ -23,6 +23,7 @@ module.exports = {
       fontFamily: {
         roboto: "'Inter', sans-serif",
         kanit: "'Kanit', sans-serif",
+        "m-plus": "'M PLUS Rounded 1c', sans-serif",
       },
     },
   },

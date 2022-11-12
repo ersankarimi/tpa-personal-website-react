@@ -45,7 +45,7 @@ export default function Header() {
           )}
         >
           <LayoutGroup id="navbar-links">
-            {["home", "about", "projects", "blog"].map((link) => (
+            {["home", "about", "projects", "posts"].map((link) => (
               <NavbarLink
                 onSelectedLink={setSelectedLink}
                 onNavbarIsOpen={setNavbarIsOpen}

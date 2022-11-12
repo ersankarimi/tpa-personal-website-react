@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 import { BlogCard, Section } from "../components";
 
-export default function Blog() {
-  const blogData = [
+export default function Posts() {
+  const postsData = [
     {
       id: 1,
       title: "Tutorial HTML5",
@@ -70,13 +70,18 @@ export default function Blog() {
         className="mt-28 mb-12 flex flex-col gap-8 font-m-plus text-neutral-custom-100"
         customKey={1}
       >
+        <h1 className="text-xl font-semibold">
+          <span className="border-b-2 border-neutral-custom-100/60">
+            Popular Posts.
+          </span>
+        </h1>
         <motion.div
           className="grid w-full grid-cols-1 gap-8  md:grid-cols-2 md:flex-row"
           variants={parentVariants}
           initial="hidden"
           animate="visible"
         >
-          {blogData.map((blog) => (
+          {postsData.map((blog) => (
             <motion.div variants={itemVariants} key={blog.id}>
               <BlogCard {...blog} />
             </motion.div>

@@ -3,7 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import { About, Blog, Homepage, Projects } from "./routes";
+import { About, Homepage, Posts, Projects } from "./routes";
 
 import "./index.css";
 
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "/blog",
-        element: <Blog />,
+        path: "/posts",
+        element: <Posts />,
       },
     ],
   },

@@ -20,9 +20,12 @@ Local:
 
 - [`http://localhost:5173`](http://localhost:5173)
 
-## Main Features
+## Pages
 
-- [ ] Undefined
+- [x] Homepage
+- [x] About
+- [x] Projects
+- [x] Posts
 
 ## Tech Stack
 

@@ -1,3 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,regular,500,700,800,900);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-full bg-main-color;
+  }
+  #root {
+    @apply m-auto flex min-h-screen max-w-4xl flex-col;
+  }
+  main {
+    @apply flex-grow;
+  }
+}

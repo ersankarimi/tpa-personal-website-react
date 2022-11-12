@@ -21,7 +21,7 @@ module.exports = {
           "linear-gradient(180deg, #1F2937 0%, #27303F 29.17%, #2E3846 55.21%, #363F4E 77.6%, #3E4756 97.92%)",
       },
       fontFamily: {
-        roboto: "'Inter', sans-serif",
+        roboto: "'Roboto', sans-serif",
         kanit: "'Kanit', sans-serif",
         "m-plus": "'M PLUS Rounded 1c', sans-serif",
       },

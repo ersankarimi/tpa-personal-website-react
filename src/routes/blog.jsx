@@ -68,7 +68,7 @@ export default function Blog() {
       </Helmet>
       <Section
         className="mt-28 mb-12 flex flex-col gap-8 font-m-plus text-neutral-custom-100"
-        customKey={3}
+        customKey={1}
       >
         <motion.div
           className="grid w-full grid-cols-1 gap-8  md:grid-cols-2 md:flex-row"

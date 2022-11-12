@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
-import { BlogCard, Button, ButtonSocialMedia } from "../components";
+import { BlogCard, Button, ButtonSocialMedia, Section } from "../components";
 
 export default function Homepage() {
   const onTheWebLinkData = [
@@ -42,14 +42,20 @@ export default function Homepage() {
         <title>Home | Ersan Karimi</title>
       </Helmet>
 
-      <section className="my-12 flex flex-col justify-center gap-2 font-m-plus text-neutral-custom-100">
+      <Section
+        className="my-12 flex flex-col justify-center gap-2 font-m-plus text-neutral-custom-100"
+        customKey={1}
+      >
         <h1 className="font-m-plus text-4xl font-bold">Ersan Karimi</h1>
         <p className="text-base opacity-80">
           a Student, Content Creator, and Self-taught Front-End Web Developer.
         </p>
-      </section>
+      </Section>
 
-      <section className="my-12 flex flex-col items-center gap-8 font-m-plus text-neutral-custom-100">
+      <Section
+        className="my-12 flex flex-col items-center gap-8 font-m-plus text-neutral-custom-100"
+        customKey={2}
+      >
         <div className="flex flex-col gap-4">
           <h1 className="text-xl font-semibold">
             <span className="border-b-2 border-neutral-custom-100/60">
@@ -65,9 +71,12 @@ export default function Homepage() {
           </p>
         </div>
         <Button link="about">More about me</Button>
-      </section>
+      </Section>
 
-      <section className="my-12 flex flex-col gap-8 font-m-plus text-neutral-custom-100">
+      <Section
+        className="my-12 flex flex-col gap-8 font-m-plus text-neutral-custom-100"
+        customKey={3}
+      >
         <div className="flex flex-col gap-4">
           <h1 className="text-xl font-semibold">
             <span className="border-b-2 border-neutral-custom-100/60">
@@ -79,6 +88,9 @@ export default function Homepage() {
             className="flex flex-col gap-2"
             initial={{
               opacity: 0,
+              transition: {
+                delay: 2,
+              },
             }}
             animate={{
               opacity: 1,
@@ -93,18 +105,17 @@ export default function Homepage() {
                 {link.name}
               </ButtonSocialMedia>
             ))}
+            <div className="mt-8 flex flex-col items-center justify-center gap-6">
+              <div className="grid w-full grid-cols-1 gap-8  md:grid-cols-2 md:flex-row">
+                {blogData.map((blog) => (
+                  <BlogCard {...blog} key={blog.id} />
+                ))}
+              </div>
+              <Button link="blog">Popular posts</Button>
+            </div>
           </motion.div>
         </div>
-
-        <div className="flex flex-col items-center justify-center gap-6">
-          <div className="grid w-full grid-cols-1 gap-8  md:grid-cols-2 md:flex-row">
-            {blogData.map((blog) => (
-              <BlogCard {...blog} key={blog.id} />
-            ))}
-          </div>
-          <Button>Popular posts</Button>
-        </div>
-      </section>
+      </Section>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
@@ -16,8 +16,12 @@ export default function Header() {
 
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
 
+  useEffect(() => {
+    setSelectedLink(pathname === "/" ? "home" : pathname.slice(1));
+  }, [pathname]);
+
   return (
-    <header className="relative bg-gray-700/20 px-4 py-3 md:px-8 lg:py-4 xl:px-12 2xl:px-16">
+    <header className="bg-gray-800/200 fixed top-0 left-0 right-0 z-50 m-auto max-w-4xl px-4 py-3 backdrop-blur-sm md:px-8 lg:py-4 xl:px-12 2xl:px-16">
       <nav className="flex items-center justify-between font-kanit text-neutral-custom-100">
         <Link
           className="flex items-center gap-2 rounded-md px-1 focus:outline-none"
@@ -33,7 +37,7 @@ export default function Header() {
 
         <motion.ul
           className={classNames(
-            "absolute bottom-0 top-14 right-0 left-0 flex h-screen flex-col items-center justify-center gap-4 bg-gray-700/20 p-8 text-base backdrop-blur-sm duration-200 ease-out md:static md:h-auto md:translate-y-[0px] md:flex-row md:items-center md:bg-transparent md:p-0",
+            "absolute bottom-0 top-14 right-0 left-0 z-50 flex h-screen flex-col items-center justify-center gap-4 bg-gray-700/90 p-8 text-base backdrop-blur-lg duration-200 ease-out md:static md:z-auto md:h-auto md:translate-y-[0px] md:flex-row md:items-center md:bg-transparent md:p-0",
             {
               "translate-y-[0px]": navbarIsOpen === true && isUnderLargeSize,
               "translate-y-[-1000px]": navbarIsOpen === false,
@@ -106,7 +110,7 @@ function NavbarLink({ link, onSelectedLink, selectedLink, onNavbarIsOpen }) {
 
         {selectedLink ? (
           <motion.div
-            className="absolute left-0 right-0 top-0 bottom-0 -z-10 m-auto rounded-md bg-[#66EBB9]/[5%]"
+            className="absolute left-0 right-0 top-0 bottom-0 -z-10 m-auto rounded-md bg-[#66EBB9]/10"
             layoutId="highlight-navbar"
           />
         ) : null}

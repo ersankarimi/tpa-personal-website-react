@@ -77,8 +77,8 @@ export default function Blog() {
           animate="visible"
         >
           {blogData.map((blog) => (
-            <motion.div variants={itemVariants}>
-              <BlogCard {...blog} key={blog.id} />
+            <motion.div variants={itemVariants} key={blog.id}>
+              <BlogCard {...blog} />
             </motion.div>
           ))}
         </motion.div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
-import { LayoutGroup, motion } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 
 import { navbarLogo } from "../../assets";
 
@@ -109,10 +109,27 @@ function NavbarLink({ link, onSelectedLink, selectedLink, onNavbarIsOpen }) {
         {link.slice(0, 1).toUpperCase() + link.slice(1)}
 
         {selectedLink ? (
-          <motion.div
-            className="absolute left-0 right-0 top-0 bottom-0 -z-10 m-auto rounded-md bg-[#66EBB9]/10"
-            layoutId="highlight-navbar"
-          />
+          <AnimatePresence>
+            <motion.div
+              className="absolute left-0 right-0 top-0 bottom-0 -z-10 m-auto rounded-md bg-[#66EBB9]/10"
+              exit={{
+                opacity: 0,
+                scale: 0,
+              }}
+              initial={{
+                opacity: 0,
+                scale: 0,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 600,
+                },
+              }}
+            />
+          </AnimatePresence>
         ) : null}
       </NavLink>
     </li>

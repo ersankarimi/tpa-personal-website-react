@@ -1,5 +1,3 @@
-import { AnimatePresence } from "framer-motion";
-
 import { avatarHero, ellipseHero } from "../../assets";
 
 import Footer from "./footer";
@@ -25,7 +23,7 @@ export default function RootLayout({ children }) {
           </div>
         </section>
 
-        <AnimatePresence mode="wait">{children}</AnimatePresence>
+        {children}
       </main>
       <Footer />
     </>

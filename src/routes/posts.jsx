@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
+import { thumbnailHtml, thumbnailPyhton } from "../assets";
 import { BlogCard, Section } from "../components";
 
 export default function Posts() {
@@ -11,7 +12,7 @@ export default function Posts() {
       description:
         "Here we will both learn the basics of HTML5. We will discuss what is HTML, what are tags and attributes in HTML, how to create forms in HTML, what are HTML semantic tags, and many others.",
       pulishedDate: "21 October 2021",
-      imgSource: "/src/assets/images/thumbnail-html.png",
+      imgSource: thumbnailHtml,
       blogUrl:
         "https://youtube.com/playlist?list=PLJ0buff7jNKOpAWlC_wnBV-N5Elkayk4b",
     },
@@ -21,7 +22,7 @@ export default function Posts() {
       description:
         "Here we will both learn the basics of the Python programming language. We will cover variables, loops, lists, dictionaries, and many others.",
       pulishedDate: "4 October 2021",
-      imgSource: "/src/assets/images/thumbnail-python.png",
+      imgSource: thumbnailPyhton,
       blogUrl:
         "https://youtube.com/playlist?list=PLJ0buff7jNKO5MJ2nDrOV_jUmGXbJzBGv",
     },
@@ -64,7 +65,7 @@ export default function Posts() {
   return (
     <>
       <Helmet>
-        <title>Blog | Ersan Karimi</title>
+        <title>Posts | Ersan Karimi</title>
       </Helmet>
       <Section
         className="mt-28 mb-12 flex flex-col gap-8 font-m-plus text-neutral-custom-100"
@@ -81,9 +82,9 @@ export default function Posts() {
           initial="hidden"
           animate="visible"
         >
-          {postsData.map((blog) => (
-            <motion.div variants={itemVariants} key={blog.id}>
-              <BlogCard {...blog} />
+          {postsData.map((post) => (
+            <motion.div variants={itemVariants} key={post.id}>
+              <BlogCard {...post} />
             </motion.div>
           ))}
         </motion.div>

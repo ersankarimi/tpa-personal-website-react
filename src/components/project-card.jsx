@@ -32,7 +32,7 @@ export default function ProjectCard({
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {technologies.map((tech) => (
-              <Badge tech={tech} id={id} />
+              <Badge tech={tech} key={`${tech}-${id}`} />
             ))}
           </div>
         </motion.div>

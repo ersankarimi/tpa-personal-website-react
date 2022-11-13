@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
+import { thumbnailHtml } from "../assets";
 import { BlogCard, Button, ButtonSocialMedia, Section } from "../components";
 
 export default function Homepage() {
@@ -19,7 +20,7 @@ export default function Homepage() {
       description:
         "Here we will both learn the basics of HTML5. We will discuss what is HTML, what are tags and attributes in HTML, how to create forms in HTML, what are HTML semantic tags, and many others.",
       pulishedDate: "21 October 2021",
-      imgSource: "/src/assets/images/thumbnail-html.png",
+      imgSource: thumbnailHtml,
       blogUrl:
         "https://youtube.com/playlist?list=PLJ0buff7jNKOpAWlC_wnBV-N5Elkayk4b",
     },
